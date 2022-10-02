@@ -1,0 +1,36 @@
+.portfolio {
+    background-color: #173F35;
+    color: #F5F5F5;
+    padding-top: 120px;
+    &__title {
+        position: relative;
+        text-align: center;
+        @include before_circle;
+        z-index: 2;
+        &:before {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__subtitle {
+        text-align: center;
+    }
+    &__wrapper {
+        margin-top: 60px;
+        display: grid;
+        grid-template: repeat(2, 280px) / repeat(4, 280px);
+        grid-auto-rows: 280px;
+        column-gap: 5px;
+        row-gap: 5px;
+    }
+    &__item {
+        transition: 0.6s;
+        img {
+            width: 100%;
+        }
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
